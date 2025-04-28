@@ -32,10 +32,10 @@
 
             // 商品購入の関数
             function buyItem(no) {
-                item = items[no-1];
-                if(no > items.length){
+                if(!items[no-1]){
                     console.log(no+"は無効な商品番号です。番号は1～8で指定してください。")
                 }else{
+                    item = items[no-1];
                     console.log("商品番号: "+no+", 商品名: "+item["name"]+"を購入します。")
                     // ここにコードを書く
                     if(item["stock"] > 0){
